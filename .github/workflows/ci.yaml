@@ -125,7 +125,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           docker pull ${{ needs.build.outputs.image-tag }}
-          docker tag  ${{ needs.build.outputs.image-tag }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.test.outputs.version }}
+          docker tag  ${{ needs.build.outputs.image-tag }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:v${{ needs.test.outputs.version }}
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:v${{ needs.test.outputs.version }}
 
   # release-image:
