@@ -34,7 +34,7 @@ Install helm chart with defaults into the `kopy` namespace
 ```bash
 helm install kopy kopy/kopy \
 --create-namespace \
---namespace=kopy \
+--namespace=kopy
 ```
 
 Install helm chart into `kopy` namespace with overriding values
@@ -42,5 +42,5 @@ Install helm chart into `kopy` namespace with overriding values
 helm upgrade kopy kopy/kopy \
 --create-namespace \
 --namespace=kopy \
---set controllerManager.container.resources.limits.memory=256Mi \
+--set controllerManager.container.resources.limits.memory=256Mi
 ```
