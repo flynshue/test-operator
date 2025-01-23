@@ -5,6 +5,8 @@ on:
       - main
     paths:
       - 'docs/**'
+      - '**mkdocs.yml'
+      - 'requirements.txt'
 permissions:
   contents: write
 jobs:
